@@ -1,0 +1,42 @@
+@minimal_api_HostAddress = http://localhost:5207
+
+
+###Prueba mensaje
+
+GET {{minimal_api_HostAddress}}/mensaje/
+Accept: application/json
+
+
+###Personas - Get All
+GET {{minimal_api_HostAddress}}/personas/
+Accept: application/json
+
+###Personas - Get By Id - Exist
+GET {{minimal_api_HostAddress}}/personas/1
+Accept: application/json
+
+###Personas - Get By Id - Doesnt exist
+GET {{minimal_api_HostAddress}}/personas/929212
+Accept: application/json
+
+
+### Personas - Post
+POST {{minimal_api_HostAddress}}/personas/
+Content-Type: application/json
+
+{
+    "nombre": "Roberto"
+}
+
+### Personas - Update
+PUT {{minimal_api_HostAddress}}/personas/2
+Content-Type: application/json
+
+{
+    "id": "1",
+    "nombre": "Stefano nuevo"
+}
+
+###Personas - Delete - Exist
+DELETE {{minimal_api_HostAddress}}/personas/3
+Accept: application/json 
